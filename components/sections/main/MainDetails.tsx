@@ -10,7 +10,7 @@ const MainDetails = () => {
       >
         <div id="main-details-title" className="text-6xl font-bold">
           <Reveal>
-            <span>Hello, I'm Nathan!</span>
+            Hello, I&apos;m Nathan!
           </Reveal>
         </div>
         <div className="text-left w-full">
