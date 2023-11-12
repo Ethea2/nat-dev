@@ -10,7 +10,7 @@ const MainDetails = () => {
       >
         <div id="main-details-title" className="text-6xl font-bold">
           <Reveal>
-            Hello, I'm Nathan!
+            <span>Hello, I'm Nathan!</span>
           </Reveal>
         </div>
         <div className="text-left w-full">
@@ -21,7 +21,7 @@ const MainDetails = () => {
           </Reveal>
         </div>
       </div>
-      <Image src={'/profile-picture.png'} width={1200} height={600} className="z-10"/>
+      <Image src={'/profile-picture.png'} width={1200} height={600} className="z-10" alt="Nathan's Profile Picture"/>
     </div>
   );
 };
