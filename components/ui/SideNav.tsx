@@ -74,7 +74,7 @@ const SPRING_OPTIONS = {
 
 const LinkLine = ({ mouseY, isHovered, title, path }: LinkLineProps) => {
   const ref = useRef<HTMLDivElement>(null);
-  const distance = useTransform(mouseY, (val) => {
+  const distance = useTransform(mouseY, (val: number) => {
     const bounds = ref.current?.getBoundingClientRect();
 
     return val - (bounds?.y || 0) - (bounds?.height || 0) / 2;
