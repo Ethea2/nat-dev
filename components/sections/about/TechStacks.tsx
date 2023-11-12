@@ -3,6 +3,7 @@ import { RiJavascriptLine } from "react-icons/ri";
 import { TbBrandNextjs } from "react-icons/tb";
 import { SiExpress, SiGo, SiMongodb, SiVite } from "react-icons/si";
 import { FaNodeJs } from "react-icons/fa";
+import {DiGo} from "react-icons/di"
 import Reveal from "@/components/animations/Reveal";
 
 const TechStacks = () => {
@@ -15,25 +16,25 @@ const TechStacks = () => {
       </div>
       <div className=" flex flex-wrap text-7xl lg:text-[180px] text-white mt-5 w-[55%] gap-5 lg:gap-10 justify-center items-center">
         <Reveal>
-          <SiMongodb className="hover:text-indigo-500 transition ease-in duration-200" />
+          <SiMongodb className="hover:text-indigo-500 hover:scale-[1.02] transition ease-in duration-200" />
         </Reveal>
         <Reveal>
-          <SiExpress className="hover:text-indigo-500 transition ease-in duration-200" />
+          <SiExpress className="hover:text-indigo-500 hover:scale-[1.02] transition ease-in duration-200" />
         </Reveal>
         <Reveal>
-          <GrReactjs className="hover:text-indigo-500 transition ease-in duration-200" />
+          <GrReactjs className="hover:text-indigo-500 hover:scale-[1.02] transition ease-in duration-200" />
         </Reveal>
         <Reveal>
-          <FaNodeJs className="hover:text-indigo-500 transition ease-in duration-200" />
+          <FaNodeJs className="hover:text-indigo-500 hover:scale-[1.02] transition ease-in duration-200" />
         </Reveal>
         <Reveal>
-          <TbBrandNextjs className="hover:text-indigo-500 transition ease-in duration-200" />
+          <TbBrandNextjs className="hover:text-indigo-500 hover:scale-[1.02] transition ease-in duration-200" />
         </Reveal>
         <Reveal>
-          <SiGo className="hover:text-indigo-500 transition ease-in duration-200" />
+          <DiGo className="hover:text-indigo-500 hover:scale-[1.02] transition ease-in duration-200" />
         </Reveal>
         <Reveal>
-          <SiVite className="hover:text-indigo-500 transition ease-in duration-200" />
+          <SiVite className="hover:text-indigo-500 hover:scale-[1.02] transition ease-in duration-200" />
         </Reveal>
       </div>
     </div>

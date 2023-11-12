@@ -5,7 +5,7 @@ const ExperienceSection = () => {
   return (
     <main
       id="experience"
-      className="w-full h-screen flex flex-col justify-start items-center p-10"
+      className="w-full min-h-screen flex flex-col justify-start items-center p-10"
     >
       <TechStacks />
       <Experiences />

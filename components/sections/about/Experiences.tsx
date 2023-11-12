@@ -9,8 +9,8 @@ const Experiences = () => {
       </div>
 
       <div className="w-full flex flex-col lg:flex-row gap-10">
-        {experiences.map((experience: ExperienceType) => (
-          <div className="lg:pl-10 flex flex-col">
+        {experiences.map((experience: ExperienceType, index: number) => (
+          <div className="lg:pl-10 flex flex-col" key={index}>
             <Reveal>
               <div className="font-semibold text-4xl">{experience.company}</div>
             </Reveal>
