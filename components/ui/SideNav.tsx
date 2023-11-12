@@ -23,42 +23,7 @@ const navItems = [
 
 interface NavItem {
   position: number;
-  title: string;"use client";
-
-import { useEffect, useRef, useState } from "react";
-import {
-  AnimatePresence,
-  motion,
-  useMotionValue,
-  useSpring,
-  useTransform,
-} from "framer-motion";
-import Link from "next/link";
-
-const NUM_LINES = 35;
-// Position key will place the title on the Nth
-// line of the sidebar
-const navItems = [
-  { position: 2, title: "Main", path: "main" },
-  { position: 8, title: "About Me", path: "about" },
-  { position: 15, title: "Experience", path: "experience" },
-  { position: 25, title: "Projects", path: "projects" },
-  { position: 33, title: "Contact Me", path: "contact" },
-];
-
-interface NavItem {
-  position: number;
   title: string;
-}
-
-interface LinkLineProps {
-  mouseY: any;
-  isHovered: boolean;
-  title?: string | undefined;
-  path?: string | undefined;
-}
-
-
 }
 
 interface LinkLineProps {
@@ -85,7 +50,7 @@ const SideNav = () => {
       className="fixed right-0 top-0 flex h-screen flex-col items-end justify-between py-4 pl-8 z-20"
     >
       {Array.from(Array(NUM_LINES).keys()).map((i) => {
-        const linkContent = navItems.find((item: NavItem) => item.position === i + 1);
+        const linkContent = navItems.find((item) => item.position === i + 1);
 
         return (
           <LinkLine
@@ -108,7 +73,7 @@ const SPRING_OPTIONS = {
 };
 
 const LinkLine = ({ mouseY, isHovered, title, path }: LinkLineProps) => {
-  const ref = useRef<any>(null);
+  const ref = useRef<HTMLDivElement>(null);
   const distance = useTransform(mouseY, (val) => {
     const bounds = ref.current?.getBoundingClientRect();
 
