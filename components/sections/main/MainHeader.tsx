@@ -29,13 +29,13 @@ const MainHeader = () => {
   const handleMouseLeave = (e: React.MouseEvent) => {
     // @ts-ignore
     const id = `#${e.target.id}`;
-    animate(id, { background: "rgba(129, 140, 248, 0)" }, { duration: 1.5 });
+    animate(id, { background: "rgba(255,255,255,0)" }, { duration: 1.5 });
   };
 
   const handleMouseEnter = (e: React.MouseEvent) => {
     // @ts-ignore
     const id = `#${e.target.id}`;
-    animate(id, { background: "rgba(129, 140, 248, 1)" }, { duration: 0.15 });
+    animate(id, { background: "rgba(255,255,255,1)" }, { duration: 0.15 });
   };
 
   return (
