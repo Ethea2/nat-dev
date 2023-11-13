@@ -10,7 +10,7 @@ const Experiences = () => {
 
       <div className="w-full flex flex-col lg:flex-row gap-10">
         {experiences.map((experience: ExperienceType, index: number) => (
-          <div className="lg:pl-10 flex flex-col" key={index}>
+          <div className=" flex flex-col lg:w-1/3 w-full" key={index}>
             <Reveal>
               <div className="font-semibold text-4xl">{experience.company}</div>
             </Reveal>
