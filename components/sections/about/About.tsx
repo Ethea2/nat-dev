@@ -17,14 +17,14 @@ const About = () => {
           className="w-full"
         />
       </div>
-      <div className="w-full lg:w-1/2 flex flex-col items-center h-full gap-2">
+      <div className="w-full lg:w-1/2 flex flex-col items-start h-full gap-4">
         <Reveal>
-          <div className="text-5xl lg:text-7xl font-bold hover:text-indigo-500 transition duration-200 ease-in cursor-pointer">
+          <div className=" text-5xl lg:text-7xl font-semibold hover:text-indigo-500 transition duration-200 ease-in cursor-pointer">
             About Me
           </div>
         </Reveal>
         <Reveal>
-          <div className="text-2xl lg:text-3xl text-center">
+          <div className="text-2xl lg:text-3xl text-left">
             Hello, I&apos;m Wray Nathan Andres, a dedicated web developer
             passionate about creating seamless digital experiences. With a track
             record of crafting web applications for various organizations, I
