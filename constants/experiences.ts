@@ -17,6 +17,11 @@ export const experiences = [
     description:
       "In a leadership capacity, I spearheaded the development of a website catering to the entire student body of DLSU. To ensure a robust infrastructure, I successfully established distinct development and production databases and servers. Additionally, I facilitated the seamless integration of the domain name with the production servers. The website operated efficiently, handling a substantial load of more than 30,000 unique page views with smooth performance, underscoring the success of the project.",
   },
+  {
+    company: "UXS Taft",
+    position: "Development Head",
+    description: "In my current role at UXS Taft, I have been instrumental in shaping the organization's trajectory. I lead comprehensive training programs for diverse team members, ensuring their skill enhancement and alignment with organizational goals. Taking charge of the organization's overall development, I implement strategic initiatives that foster growth and innovation. My responsibilities extend to spearheading various projects, where I navigate challenges with a strategic mindset, consistently delivering successful outcomes. My contributions reflect a commitment to cultivating a culture of continuous improvement and directly contributing to the organization's success through effective project management and team development."
+  }
 ];
 
 export interface ExperienceType {
