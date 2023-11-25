@@ -1,6 +1,17 @@
 import Reveal from '@/components/animations/Reveal'
 import Image from 'next/image'
 
+const ABTME = [
+    '💻 I like programming for fun!',
+    '🎮 I like competitive games ',
+    '🎸 I love playing the Guitar',
+    '🇵🇭 I was born in Philippines ',
+    '🇴🇲 But I was raised in Oman ',
+    '🚗💨 I am a fast learner ',
+    '<> my favorite programming language is Go',
+    '</> but JS and TS is my most used',
+]
+
 const About = () => {
     return (
         <main
@@ -20,22 +31,18 @@ const About = () => {
             <div className="w-full lg:w-1/2 flex flex-col items-start h-full gap-4">
                 <Reveal>
                     <div className=" text-5xl lg:text-7xl font-semibold hover:text-indigo-500 transition duration-200 ease-in cursor-pointer">
-                        About Me
+                        About me!
                     </div>
                 </Reveal>
-                <Reveal>
-                    <div className="text-2xl lg:text-3xl text-left">
-                        Hello, I&apos;m Wray Nathan Andres, a dedicated web
-                        developer passionate about creating seamless digital
-                        experiences. With a track record of crafting web
-                        applications for various organizations, I thrive on
-                        exploring and applying diverse technologies to elevate
-                        my projects. I&apos;m committed to continuous learning,
-                        ensuring that my work reflects the latest industry
-                        advancements. Let&apos;s build something remarkable
-                        together.
-                    </div>
-                </Reveal>
+                <div className="text-2xl lg:text-3xl text-left">
+                    <ul className="flex flex-col gap-5 text-2xl">
+                        {ABTME.map((item, index) => (
+                            <Reveal key={index}>
+                                <li>{item}</li>
+                            </Reveal>
+                        ))}
+                    </ul>
+                </div>
             </div>
         </main>
     )
