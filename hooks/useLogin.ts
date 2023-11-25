@@ -1,6 +1,6 @@
 import { useRef } from 'react'
 import { Id, toast } from 'react-toastify'
-import { useAuth } from '../hooks/useAuth.ts'
+import { useAuth } from '../hooks/useAuth'
 import { useRouter } from 'next/navigation'
 
 const useLogin = () => {

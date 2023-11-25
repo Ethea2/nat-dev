@@ -1,13 +1,19 @@
 'use client'
-import { useState } from 'react'
-import useLogin from '@/hooks/useLogin.ts'
+import { useEffect, useState } from 'react'
+import useLogin from '@/hooks/useLogin'
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
+import { useAuth } from '@/hooks/useAuth'
+import { useRouter } from 'next/navigation'
 function Login() {
+    const { user } = useAuth()
     const [username, setUsername] = useState<string>('')
     const [password, setPassword] = useState<string>('')
     const { login } = useLogin()
-
+    const router = useRouter()
+    useEffect(() => {
+        if (user) router.push('/dashboard')
+    }, [user, router])
     const handleLogin = async () => {
         await login(username, password)
     }
