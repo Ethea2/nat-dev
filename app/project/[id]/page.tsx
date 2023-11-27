@@ -27,8 +27,8 @@ async function ProjectPage({ params }: { params: { id: string } }) {
                 src={project.image}
                 width={0}
                 height={0}
-                sizes="50vw"
-                style={{ width: '50%', height: 'auto' }}
+                sizes="80vw"
+                style={{ width: '80%', height: 'auto' }}
                 alt={project.title + ' image'}
             />
             {project.body}
