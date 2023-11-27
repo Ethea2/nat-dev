@@ -16,7 +16,6 @@ import {
     SiMongodb,
     SiMysql,
     SiPostgresql,
-    SiNextDotJs,
     SiVite,
     SiTypescript,
     SiExpress,
