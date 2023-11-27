@@ -3,6 +3,8 @@ import { motion, useTransform, useScroll } from 'framer-motion'
 import { useRef } from 'react'
 import { CardType } from '@/types/UiTypes'
 import { ProjectType } from '@/types/ProjectType'
+import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 
 const Carousel = ({ cards }: { cards: ProjectType[] }) => {
     const targetRef = useRef<HTMLDivElement | null>(null)
@@ -27,9 +29,10 @@ const Carousel = ({ cards }: { cards: ProjectType[] }) => {
 
 const Card = ({ card }: { card: ProjectType }) => {
     return (
-        <div
+        <Link
+            href={`/project/${card.id}`}
             key={card.id}
-            className="group relative h-[450px] w-[450px] overflow-hidden bg-neutral-200"
+            className="group relative h-[450px] w-[450px] overflow-hidden bg-neutral-200 cursor-pointer"
         >
             <div
                 style={{
@@ -44,7 +47,7 @@ const Card = ({ card }: { card: ProjectType }) => {
                     {card.title}
                 </p>
             </div>
-        </div>
+        </Link>
     )
 }
 

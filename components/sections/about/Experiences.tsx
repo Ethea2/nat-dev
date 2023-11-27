@@ -46,7 +46,7 @@ const Experiences = async () => {
                                 })}
                             </div>
                             <Reveal>
-                                <div className="text-justify">
+                                <div className="text-left">
                                     {experience.body}
                                 </div>
                             </Reveal>
