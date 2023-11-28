@@ -4,14 +4,15 @@ import { TECHSTACKS } from '@/constants/techstacks'
 import { ExpType } from '@/types/ExpType'
 
 const getExperiences = async () => {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/exp/`)
+    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/exp/`, {
+        next: { revalidate: 3600 },
+    })
 
     return res.json()
 }
 
 const Experiences = async () => {
     const experiences = await getExperiences()
-    console.log(experiences.data)
     return (
         <div className="w-full flex flex-col mt-10 min-h-full">
             <div className="text-5xl lg:text-7xl font-bold w-full text-center lg:text-left mb-10">

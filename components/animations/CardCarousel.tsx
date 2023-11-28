@@ -57,12 +57,12 @@ const CardCarousel = ({
             <div className="relative overflow-hidden p-4">
                 {/* CARDS */}
                 <div className=" max-w-6xl">
-                    <p className="mb-4 text-7xl font-bold text-white lg:px-10 text-center lg:text-left">
-                        <Reveal>
+                    <Reveal>
+                        <p className="mb-4 text-7xl font-bold text-white lg:px-10 text-center lg:text-left">
                             {text1 + ' '}
                             <span className="text-indigo-600">{text2}</span>
-                        </Reveal>
-                    </p>
+                        </p>
+                    </Reveal>
                     <motion.div
                         animate={{
                             x: offset,
