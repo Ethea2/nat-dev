@@ -1,27 +1,16 @@
+import { DiGo } from 'react-icons/di'
+import { FaJava, FaJs, FaNodeJs, FaReact, FaUnity } from 'react-icons/fa'
 import {
-    FaReact,
-    FaNodeJs,
-    FaJs,
-    FaHtml5,
-    FaCss3,
-    FaDatabase,
-    FaCode,
-    FaServer,
-    FaGofore,
-    FaWindowRestore,
-    FaVials,
-    FaTable,
-} from 'react-icons/fa'
-import {
+    SiArchlinux,
+    SiCsharp,
+    SiExpress,
     SiMongodb,
     SiMysql,
     SiPostgresql,
-    SiVite,
     SiTypescript,
-    SiExpress,
+    SiVite,
 } from 'react-icons/si'
-import { TbBrandSolidjs, TbBrandNextjs } from 'react-icons/tb'
-import { DiGo } from 'react-icons/di'
+import { TbBrandNextjs, TbBrandSolidjs } from 'react-icons/tb'
 export interface TechstackType {
     stack: string
     icon: JSX.Element
@@ -40,4 +29,8 @@ export const TECHSTACKS: TechstackType[] = [
     { stack: 'vite', icon: <SiVite /> },
     { stack: 'javascript', icon: <FaJs /> },
     { stack: 'typescript', icon: <SiTypescript /> },
+    { stack: 'java', icon: <FaJava /> },
+    { stack: 'unity', icon: <FaUnity /> },
+    { stack: 'csharp', icon: <SiCsharp /> },
+    { stack: 'arch', icon: <SiArchlinux /> },
 ]

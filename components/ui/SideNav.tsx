@@ -99,7 +99,13 @@ const LinkLine = ({ mouseY, isHovered, title, path }: LinkLineProps) => {
 
     if (title) {
         return (
-            <Link href={`#${path}`}>
+            <div
+                onClick={() => {
+                    const element = document.getElementById(`${path}`)
+
+                    element?.scrollIntoView({ behavior: 'smooth' })
+                }}
+            >
                 <motion.div
                     ref={ref}
                     className="group relative bg-white transition-colors hover:bg-indigo-400"
@@ -118,7 +124,7 @@ const LinkLine = ({ mouseY, isHovered, title, path }: LinkLineProps) => {
                         )}
                     </AnimatePresence>
                 </motion.div>
-            </Link>
+            </div>
         )
     } else {
         return (

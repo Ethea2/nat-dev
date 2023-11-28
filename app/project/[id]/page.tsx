@@ -1,4 +1,5 @@
-import { TECHSTACKS, TechstackType } from '@/constants/techstacks'
+import CardCarousel from '@/components/animations/CardCarousel'
+import { TECHSTACKS } from '@/constants/techstacks'
 import { ProjectType } from '@/types/ProjectType'
 import Image from 'next/image'
 
@@ -10,6 +11,13 @@ export async function generateStaticParams() {
     }))
 }
 
+const getProjects = async () => {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/project/`)
+
+    const json = await res.json()
+    return json.data.data
+}
+
 async function getData(id: string) {
     const res = await fetch(
         process.env.NEXT_PUBLIC_BASE_URL + `/api/project/${id}`
@@ -19,24 +27,48 @@ async function getData(id: string) {
 }
 
 async function ProjectPage({ params }: { params: { id: string } }) {
-    const project = await getData(params.id)
+    const projectPromise = getData(params.id)
+    const projectsPromise = getProjects()
+
+    const [project, projects] = await Promise.all([
+        projectPromise,
+        projectsPromise,
+    ])
     return (
-        <section className="w-full h-screen flex flex-col justify-center items-center">
-            {project.title}
-            <Image
-                src={project.image}
-                width={0}
-                height={0}
-                sizes="80vw"
-                style={{ width: '80%', height: 'auto' }}
-                alt={project.title + ' image'}
-            />
-            {project.body}
-            <div className="flex gap-3 text-2xl my-2">
+        <section className="w-full min-h-screen flex flex-col justify-center items-center lg:p-20 lg:gap-10">
+            <div className="w-full text-center text-5xl font-bold p-10">
+                {project.title}
+            </div>
+            <div className="relative w-full h-[15rem] lg:h-[40rem]">
+                <Image
+                    src={project.image}
+                    layout="fill"
+                    alt={project.title + ' image'}
+                    className="lg:object-contain p-2"
+                />
+            </div>
+            <div className="flex gap-3 text-5xl lg:text-7xl my-2 p-10">
                 {TECHSTACKS.map((tech, index) => {
                     if (project.techstacks.includes(tech.stack))
-                        return <div key={index}>{tech.icon}</div>
+                        return (
+                            <div
+                                key={index}
+                                className=" hover:scale-110 transition duration-300 ease-in hover:text-indigo-600"
+                            >
+                                {tech.icon}
+                            </div>
+                        )
                 })}
+            </div>
+            <div className="w-full text-left text-xl lg:text-2xl indent-10 lg:indent-28 p-10">
+                {project.body}
+            </div>
+            <div className="w-full p-0 m-0">
+                <CardCarousel
+                    items={projects}
+                    text1="My"
+                    text2="other projects"
+                />
             </div>
         </section>
     )

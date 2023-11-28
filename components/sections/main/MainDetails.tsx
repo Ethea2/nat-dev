@@ -19,7 +19,7 @@ const MainDetails = () => {
                 className="flex flex-col p-4 text-center lg:text-left gap-4 lg:w-1/2"
             >
                 <div id="main-details-title" className="text-6xl font-bold">
-                    <Reveal>Hello, I&apos;m Nathan!</Reveal>
+                    <Reveal>Hello, I&apos;m Wray Nathan Andres!</Reveal>
                 </div>
                 <div className="w-full text-xl">
                     <Reveal>

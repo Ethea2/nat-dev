@@ -2,7 +2,7 @@ import Reveal from '@/components/animations/Reveal'
 import Image from 'next/image'
 
 const ABTME = [
-    '💻 I like programming for fun!',
+    '💻 I use arch btw',
     '🎮 I like competitive games ',
     '🎸 I love playing the Guitar',
     '🇵🇭 I was born in Philippines ',
@@ -34,8 +34,8 @@ const About = () => {
                         About me!
                     </div>
                 </Reveal>
-                <div className="text-2xl lg:text-3xl text-left">
-                    <ul className="flex flex-col gap-5 text-2xl">
+                <div className="text-xl lg:text-3xl text-left">
+                    <ul className="flex flex-col gap-5">
                         {ABTME.map((item, index) => (
                             <Reveal key={index}>
                                 <li>{item}</li>

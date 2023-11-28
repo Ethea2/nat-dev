@@ -38,7 +38,10 @@ const MainHeader = () => {
     }
 
     return (
-        <main className="bg-black w-full h-screen flex justify-center items-center text-white">
+        <main
+            id="main"
+            className="bg-black w-full h-screen flex justify-center items-center text-white"
+        >
             <div
                 ref={scope}
                 className="absolute grid h-screen w-full grid-cols-[repeat(auto-fit,_minmax(75px,_1fr))] grid-rows-[repeat(auto-fit,_minmax(75px,_1fr))]"
