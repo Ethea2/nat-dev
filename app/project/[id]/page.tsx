@@ -43,8 +43,8 @@ async function ProjectPage({ params }: { params: { id: string } }) {
         projectsPromise,
     ])
     return (
-        <section className="w-full min-h-screen flex flex-col justify-center items-center lg:p-20 lg:gap-10">
-            <PageWrapper>
+        <PageWrapper>
+            <section className="w-full min-h-screen flex flex-col justify-center items-center lg:p-20 lg:gap-10">
                 <div className="w-full text-center text-4xl font-bold p-10">
                     {project.title}
                 </div>
@@ -69,7 +69,7 @@ async function ProjectPage({ params }: { params: { id: string } }) {
                             )
                     })}
                 </div>
-                <div className="w-full text-left text-xl lg:text-2xl indent-10 lg:indent-28 p-10">
+                <div className="w-full text-left text-xl lg:text-2xl indent-8 lg:indent-10 p-10">
                     {project.body}
                 </div>
                 <div className="w-full p-0 m-0">
@@ -79,8 +79,8 @@ async function ProjectPage({ params }: { params: { id: string } }) {
                         text2="other projects"
                     />
                 </div>
-            </PageWrapper>
-        </section>
+            </section>
+        </PageWrapper>
     )
 }
 
