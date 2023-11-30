@@ -29,7 +29,7 @@ const CONTACT = [
 const Contact = () => {
     return (
         <section className="w-full flex justify-start items-start flex-col p-10">
-            <div className="font-bold text-4xl lg:text-7xl text-center lg:text-left w-full mb-10">
+            <div className="flex w-full font-bold text-4xl lg:text-7xl items-center justify-center text-center lg:text-left w-full mb-10">
                 <Reveal>Contact me!</Reveal>
             </div>
             <div className="w-full text-5xl lg:text-9xl gap-10 flex flex-wrap justify-center items-center">
