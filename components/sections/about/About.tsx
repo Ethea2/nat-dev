@@ -18,7 +18,7 @@ const About = () => {
             id="about"
             className="w-full min-h-screen flex flex-col justify-center items-center gap-10 lg:flex-row p-10"
         >
-            <div className="w-full lg:w-1/2">
+            <div className="w-full border-2 border-white lg:w-1/2">
                 <Image
                     src="/main-photo.JPG"
                     alt="Nathan's about photo"
