@@ -21,7 +21,7 @@ const MainDetails = () => {
                 <div id="main-details-title" className="text-6xl font-bold">
                     <Reveal>Hello, I&apos;m Wray Nathan Andres!</Reveal>
                 </div>
-                <div className="w-full text-xl text-indigo-500 text-semibold">
+                <div className="w-full text-xl transition duration-300 ease-in hover:text-indigo-500 text-semibold">
                     <Reveal>
                         I am an aspiring web developer hailing from Manila! I am
                         currently studying in DLSU as a Bachelor of Science in
