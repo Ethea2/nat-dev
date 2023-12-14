@@ -7,16 +7,16 @@ import { useEffect } from 'react'
 import { toast } from 'react-toastify'
 
 function Dashboard() {
-    const { user } = useAuth()
-    const router = useRouter()
-    useEffect(() => {
-        if (!user) {
-            router.push('/login')
-            toast('You need to login first to access this page!', {
-                type: 'error',
-            })
-        }
-    }, [user, router])
+    // const { user } = useAuth()
+    // const router = useRouter()
+    // useEffect(() => {
+    //     if (!user) {
+    //         router.push('/login')
+    //         toast('You need to login first to access this page!', {
+    //             type: 'error',
+    //         })
+    //     }
+    // }, [user, router])
     return (
         <div className="min-h-screen w-full">
             <DataDisplay url={'/api/exp/'} title={'Experiences'} />

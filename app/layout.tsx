@@ -4,8 +4,14 @@ import './globals.css'
 import { ThemeProvider } from '@/components/theme-provider'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import { Kanit } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+// const inter = Inter({ subsets: ['latin'] })
+
+const custom = Kanit({
+    weight: ['400', '600'],
+    subsets: ['latin'],
+})
 
 export const metadata: Metadata = {
     title: 'Wray Nathan',
@@ -19,7 +25,7 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-            <body className={inter.className}>
+            <body className={custom.className}>
                 <ThemeProvider
                     attribute="class"
                     defaultTheme="dark"
