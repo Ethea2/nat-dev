@@ -51,6 +51,7 @@ const Contact = () => {
                         <a
                             href={con.path}
                             key={index}
+                            target="_blank"
                             className="hover:text-indigo-500 hover:scale-110 text-white transition ease-in duration-300"
                         >
                             <Reveal>{con.icon}</Reveal>
