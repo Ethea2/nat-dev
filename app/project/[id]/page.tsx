@@ -3,6 +3,7 @@ import { PageWrapper } from '@/components/animations/PageWrapper'
 import { TECHSTACKS } from '@/constants/techstacks'
 import { ProjectType } from '@/types/ProjectType'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export async function generateStaticParams() {
     const res = await fetch(
@@ -79,6 +80,12 @@ async function ProjectPage({ params }: { params: { id: string } }) {
                         text2="other projects"
                     />
                 </div>
+                <Link
+                    href="/"
+                    className="border-2 p-4 rounded-xl text-xl font-bold hover:scale-110 transition duration-300 ease-in hover:text-indigo-500 hover:border-indigo-500"
+                >
+                    Go back to main page!
+                </Link>
             </section>
         </PageWrapper>
     )
