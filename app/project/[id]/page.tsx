@@ -70,7 +70,7 @@ async function ProjectPage({ params }: { params: { id: string } }) {
                             )
                     })}
                 </div>
-                <div className="w-full text-left text-xl lg:text-2xl indent-8 lg:indent-10 p-10">
+                <div className="w-full lg:text-left text-justify text-xl lg:text-2xl indent-5 lg:indent-10 p-10">
                     {project.body}
                 </div>
                 <div className="w-full p-0 m-0">
