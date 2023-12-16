@@ -374,27 +374,3 @@ interface EditModalInput {
     setRefetch: React.Dispatch<React.SetStateAction<boolean>>
     Id: number
 }
-
-export const EditProjectModal = ({
-    show,
-    setShow,
-    setRefetch,
-    Id,
-}: EditModalInput) => {
-    return (
-        <>
-            {show && (
-                <div className="fixed flex justify-center items-center w-full h-screen">
-                    <div
-                        className="fixed bg-black/50 w-full h-screen"
-                        onClick={() => setShow(false)}
-                    />
-
-                    <div className="border-2 border-white w-1/2 min-h-1/2 z-10 bg-black p-5 flex flex-col justify-center items-center">
-                        Hello
-                    </div>
-                </div>
-            )}
-        </>
-    )
-}
