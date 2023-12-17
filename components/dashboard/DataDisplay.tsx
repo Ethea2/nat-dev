@@ -4,11 +4,7 @@ import { ExpType } from '@/types/ExpType'
 import { useEffect, useRef, useState } from 'react'
 import useFetch from '@/hooks/useFetch'
 import { FaRegEdit, FaPlusSquare } from 'react-icons/fa'
-import {
-    AddExpModal,
-    AddProjectModal,
-    EditProjectModal,
-} from '../modals/modals'
+import { AddExpModal, AddProjectModal } from '../modals/modals'
 import { ProjectType } from '@/types/ProjectType'
 import { useAuth } from '@/hooks/useAuth'
 import { UserType } from '@/contexts/AuthContext'
